@@ -1,0 +1,89 @@
+:root{
+    --base-color:#37517E;
+}
+
+.front{
+    background-color: var(--base-color);
+}
+
+.anime{
+    animation: move 2.5s linear infinite alternate-reverse;
+}
+
+.icons{
+    filter: grayscale(100%);
+    transition: all .4s;
+}
+
+.icons:hover{
+    filter: grayscale(0);
+    scale: 1.5;
+}
+
+.abt{
+    color: var(--base-color);
+}
+
+.gray{
+    width: 100px;
+    height: 2px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.blue{
+    width: 40%;
+    height: 4px;
+    background-color:var(--bs-info);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.eum{
+    color:var(--base-color);
+}
+
+.vol{
+    color: var(--base-color);
+}
+
+@keyframes move {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(5%)
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .landing{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+    }
+
+    .anime{
+        animation: pasued;
+    }
+
+    .btns{
+        justify-content: center;
+    }
+
+    .front{
+        height: 100vh;
+        }
+
+    .pm{
+        margin-inline-start: 0;
+    }
+
+    .tm{
+        margin-block-end: 0;
+    }
+    
+}
